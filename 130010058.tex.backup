@@ -1,0 +1,30 @@
+\documentclass[12pt, a4paper]{report}
+
+\usepackage[affil-it]{authblk}
+\usepackage{etoolbox}
+\usepackage{lmodern}
+\usepackage{titlesec}
+\usepackage{float}
+\usepackage{amsfonts}
+
+\makeatletter
+\patchcmd{\@maketitle}{\LARGE \@title}{\fontsize{20}{19.2}\selectfont\@title}{}{}
+\makeatother
+
+\renewcommand\Authfont{\fontsize{16}{14.4}\selectfont}
+\renewcommand\Affilfont{\fontsize{12}{10.8}\itshape}
+
+\title{\textbf{LC Tank with Resistance}}
+\author{Vikas Kurapati}
+\affil{Roll No. : 130010058}
+\usepackage{graphicx}
+\begin{document}
+\maketitle
+\newpage
+\tableofcontents
+\begin{abstract}
+ The problem is to simulate the behaviour of a LC tank with a resistance applied across a voltage in series with given initial conditions of the charge in the capacitor and current in the inductor.
+\end{abstract}
+
+\end{document}
+
