@@ -26,5 +26,9 @@
  The problem is to simulate the behaviour of a LC tank with a resistance applied across a voltage in series with given initial conditions of the charge in the capacitor and current in the inductor.
 \end{abstract}
 
+\begin{Section}
+ 
+\end{Section}
+
 \end{document}
 
