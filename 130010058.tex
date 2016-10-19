@@ -21,7 +21,7 @@
 \author{Vikas Kurapati}
 \affil{Roll No. : 130010058}
 \usepackage{graphicx}
-\usepackage{url}
+\usepackage{hyperref}
 \begin{document}
 \maketitle
 \newpage
@@ -37,4 +37,12 @@
 \item matplotlib version 1.4.2 is used. So matplotlib version 1.4.2 or higher is preffered to run the code. 
 \end{itemize}
 
+\section*{Governing Equation for the problem}
+The governing equation for this electrical problem is 
+\begin{equation}
+ \frac{d^2V_C}{dt^2} + \frac{R}{L}\frac{dV_C}{dt} + \frac{V_C}{LC} = \frac{V_S}{LC}
+\end{equation}
+where $V_C$ is the voltage across the capacitor varying with time, R is the resistance of the resistor, L is inductance of the inductor,C is the capacitance of the capacitor and $V_S$ is the voltage of the source voltage under the initial conditions of $V_C(0^+) = V_)$ the initial capacitor voltage and $\frac{dV_C}{dt}(0^+) = \frac{i_0}{C}$, where initial inductor current is $i_0$.
+
+Solving this analytically for two cases of $
 \end{document}
