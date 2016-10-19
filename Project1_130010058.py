@@ -30,13 +30,6 @@ def problem(C,L,R,V,V0,I0,tf,n):
     return V_matrix,t
 
 
-def animate(i):
-    thisx = [0, x1[i], x2[i]]
-    thisy = [0, y1[i], y2[i]]
-
-    line.set_data(thisx, thisy)
-    time_text.set_text(time_template % (i*dt))
-    return line, time_text
 
 # In[4]:
 
