@@ -32,7 +32,7 @@ def problem(C, L, R, V, V0, I0, tf, n):
         i_matrix = C*(A1*s1*np.exp(s1*t) + A2*s2*np.exp(s2*t))
     return V_matrix, i_matrix, t
 
-
+'''
 @given(st.integers(min_value=0), st.integers(min_value=0),
        st.integers(min_value=0), st.integers(min_value=0),
        st.integers(min_value=0), st.integers(min_value=0),
@@ -43,7 +43,7 @@ def test_problem_hyp(C, L, R, V, V0, I0, tf, n):
     assert abs(t[-1] - tf) < 1e-6
     assert abs(V[-1] - V) < 1e-6
     assert t[-1] > 0
-
+'''
 V_u, i_u, t_u = problem(1.0, 1.0, 0.5, 10.0, 10.0, 1.0, 25.0, 250)
 V_c, i_c, t_c = problem(1.0, 1.0, 2.0, 10.0, 10.0, 1.0, 25.0, 250)
 V_o, i_o, t_o = problem(1.0, 1.0, 4.5, 10.0, 10.0, 1.0, 25.0, 250)
@@ -56,7 +56,7 @@ plt.ylabel('Capacitor Voltage')
 plt.xlabel('time')
 plt.legend()
 plt.savefig('VC.png')
-plt.show()
+plt.close()
 
 R = 0.5
 V = 10.0
@@ -68,7 +68,7 @@ plt.xlabel('time')
 plt.ylabel('Voltage across components')
 plt.legend(loc='lower right')
 plt.savefig('V.png')
-plt.show()
+plt.close()
 
 # ### The code required for animation.
 
@@ -117,9 +117,6 @@ def animate(X, Y, name):
                                    frames=250, interval=5, blit=True)
     anim.save(name+'.mp4', fps=120, extra_args=['-vcodec', 'libx264'])
 
-    plt.show()
-
 animate(t_u, V_u, 'vcu')
-
 # In[102]:
 animate(t_u, i_u, 'iu')
