@@ -1,0 +1,12 @@
+\begin{thebibliography}{1}
+
+\bibitem{matplotlib}
+Animations using matplotb.
+\newblock {\em http://matplotlib.org/1.4.1/examples/animation/index.html}.
+
+\bibitem{RLC}
+National Tsing~Hua University.
+\newblock Chapter 8 natural and step responses of rlc circuits.
+\newblock pages 46--49.
+
+\end{thebibliography}

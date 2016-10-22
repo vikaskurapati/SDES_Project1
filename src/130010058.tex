@@ -32,14 +32,17 @@
 \end{abstract}
 
 \begin{itemize}
+\item The IPython notebook used can be found at \url{https://gist.github.com/vikaskurapatibat/a457aa26bd2928eacbb1077261eb3905.js}
 \item Public git repo with open source code is available on \url{https://github.com/vikaskurapatibat/SDES_Project1}
-\item Ipython 2.3.0 is used to run the IPython notebook. So the version 2.3.0 or higher is preferrable to run the notebook.
+\item Ipython 5.1.0 is used to run the IPython notebook. So the version 5.1.0 or higher is preferrable to run the notebook.
 \item numpy version 1.8.2 is used. So numpy version 1.8.2 or higher is preffered to run the code.
-\item matplotlib version 1.4.2 is used. So matplotlib version 1.4.2 or higher is preffered to run the code. 
+\item matplotlib version 1.4.2 is used. So matplotlib version 1.4.2 or higher is preffered to run the code. \cite{matplotlib}
+\item ffmpeg is required for the animation to be saved in mp4 format. ffmpeg 2.7.6 was used for it. So, ffmeg with version 2.7.6 or higher is preferrable for running of the python script.
 \end{itemize}
 
+
 \section*{Governing Equation for the problem}
-The governing equation for this electrical problem is 
+The governing equation for this electrical problem is  \cite{RLC}
 \begin{equation}
  \frac{d^2V_C}{dt^2} + \frac{R}{L}\frac{dV_C}{dt} + \frac{V_C}{LC} = \frac{V_S}{LC}
 \end{equation}
@@ -65,7 +68,7 @@ $A_1 = \frac{\frac{i_0}{C} - (V_0 - V)s_2}{s_1 - s_2} , A_2 = \frac{\frac{i_0}{C
 The results were plotted showing the voltage accross a capacitor varying with time for three cases of damping.
 \begin{figure}[H]
  \centering
- \includegraphics[width = \textwidth]{VC.png}
+ \includegraphics[width = \textwidth]{../output/VC.png}
  \caption{$V_C$ vs time}
  \label{VC}
 \end{figure}
@@ -73,9 +76,11 @@ The results were plotted showing the voltage accross a capacitor varying with ti
 The results were plotted showing variation of voltage across the capacitor, inductor and resistor for an underdamped case of R = 0.5.
 \begin{figure}[H]
  \centering
- \includegraphics[width = \textwidth]{V.png}
- \caption{Voltage vs time for different components.}
+ \includegraphics[width = \textwidth]{../output/V.png}
+ \caption{Voltage vs time}
  \label{V}
 \end{figure}
 
+\bibliographystyle{plain}
+\bibliography{130010058}
 \end{document}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p><b>Variation of Capacitor voltage with time for underdamped case.</b></p>
+
+<div style="text-align:center">
+  <button onclick="playPause()">Play/Pause</button>
+  <button onclick="makeBig()">Big</button>
+  <button onclick="makeSmall()">Small</button>
+  <button onclick="makeNormal()">Normal</button>
+  <br><br>
+  <video id="video1" width="420">
+    <source src="vcu.mp4" type="video/mp4">
+    <source src="vcu.ogg" type="video/ogg">
+    Your browser does not support HTML5 video.
+  </video>
+</div>
+
+<script>
+var myVideo = document.getElementById("video1");
+
+function playPause() {
+    if (myVideo.paused)
+        myVideo.play();
+    else
+        myVideo.pause();
+}
+
+function makeBig() {
+    myVideo.width = 560;
+}
+
+function makeSmall() {
+    myVideo.width = 320;
+}
+
+function makeNormal() {
+    myVideo.width = 420;
+}
+</script>
+
+</body>
+
+<p><b>Variation of current in circuit with time for underdamped case.</b></p>
+
+<div style="text-align:center">
+  <button onclick="playPause2()">Play/Pause</button>
+  <button onclick="makeBig2()">Big</button>
+  <button onclick="makeSmall2()">Small</button>
+  <button onclick="makeNormal2()">Normal</button>
+  <br><br>
+  <video id="video2" width="420">
+    <source src="iu.mp4" type="video/mp4">
+    <source src="iu.ogg" type="video/ogg">
+    Your browser does not support HTML5 video.
+  </video>
+</div>
+
+<script>
+var myVideo2 = document.getElementById("video2");
+
+function playPause2() {
+    if (myVideo2.paused)
+        myVideo2.play();
+    else
+        myVideo2.pause();
+}
+
+function makeBig2() {
+    myVideo2.width = 560;
+}
+
+function makeSmall2() {
+    myVideo2.width = 320;
+}
+
+function makeNormal2() {
+    myVideo2.width = 420;
+}
+</script>
+
+</body>
+
+</html>
