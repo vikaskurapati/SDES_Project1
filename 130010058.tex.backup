@@ -9,6 +9,8 @@
 \usepackage{titlesec}
 \usepackage{float}
 \usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage[pdfpagelabels]{hyperref}
 
 \makeatletter
 \patchcmd{\@maketitle}{\LARGE \@title}{\fontsize{20}{19.2}\selectfont\@title}{}{}
@@ -20,8 +22,7 @@
 \title{\textbf{LC Tank with Resistance}}
 \author{Vikas Kurapati}
 \affil{Roll No. : 130010058}
-\usepackage{graphicx}
-\usepackage{hyperref}
+
 \begin{document}
 \maketitle
 \newpage
@@ -42,7 +43,21 @@ The governing equation for this electrical problem is
 \begin{equation}
  \frac{d^2V_C}{dt^2} + \frac{R}{L}\frac{dV_C}{dt} + \frac{V_C}{LC} = \frac{V_S}{LC}
 \end{equation}
-where $V_C$ is the voltage across the capacitor varying with time, R is the resistance of the resistor, L is inductance of the inductor,C is the capacitance of the capacitor and $V_S$ is the voltage of the source voltage under the initial conditions of $V_C(0^+) = V_)$ the initial capacitor voltage and $\frac{dV_C}{dt}(0^+) = \frac{i_0}{C}$, where initial inductor current is $i_0$.
 
-Sol
+where $V_C$ is the voltage across the capacitor varying with time, R is the resistance of the resistor, L is inductance of the inductor,C is the capacitance of the capacitor and $V_S$ is the voltage of the source voltage under the initial conditions of $V_C(0^+) = V_0$ the initial capacitor voltage and $\frac{dV_C}{dt}(0^+) = \frac{i_0}{C}$, where initial inductor current is $i_0$. \\
+
+Solving this analytically for two cases of $\Delta = 0$ and $\Delta \ne 0$ where $\Delta = \frac{R^2}{L^2} - \frac{4}{LC}$ \\
+\subsection*{$\Delta = 0$ :}
+The solution when $\Delta = 0$ under the given initial conditions is:
+\begin{equation}
+ V_C(t) = V_S + e^\frac{-t}{2RC}(D_1t + D_2)
+\end{equation}
+where $D_1 = \frac{i_0}{C}e^\frac{1}{2RC} , D_2 = (V_0 - V)e^\frac{1}{2RC}$
+\subsection*{$\Delta \ne 0$ :}
+The solution when $\Delta \ne 0$ under the given initial conditions is:
+\begin{equation}
+ V_C(t) = V_0 + A_1e^{s_1t} + A_2e^{s_2t}
+\end{equation}
+where $s_1 = \frac{-R}{2L} + \frac{\sqrt{\Delta}}{2} , s_2 = \frac{-R}{2L} - \frac{\sqrt{\Delta}}{2}$ \\
+$A_1 = \frac{\frac{i_0}{C} - (V_0 - V)s_2}{s_1 - s_2} , A_2 = \frac{\frac{i_0}{C} - (V_0 - V)s_1}{s_2 - s_1}$
 \end{document}
